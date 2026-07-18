@@ -3,3 +3,6 @@ Hello Gemini.  I am creating a csv file with a list of first names and regions, 
 
 #after it responds
 Suggests your corrections, don't merely state what is correct
+
+#sometimes it add headers, which are undesirable
+please skip the text "First Name,Region Code" at the top of your results, it is just data being added to a csv
