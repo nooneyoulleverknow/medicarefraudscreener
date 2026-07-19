@@ -9,3 +9,6 @@ please skip the text "First Name,Region Code" at the top of your results, it is 
 
 #sometimes it may start to skip white space
 hey, don't remove the white space
+
+#Sometimes it changes output format, so everything is up against a white background losing your whitespace.
+hey screwball, when you use that format, I am losing my whitespace.  try again
