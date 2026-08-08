@@ -69,7 +69,7 @@ So let's say we want to search maine, based upon the service providers, in the y
 php evaluator.php me s 2024 all 2 revenue
 
 Now let's say that I want to search both maine and minnesota, for service providers (I haven't found billers useful), for all years, for covid, with a standard deviation of 0 to show all records, against revenues per client:
-php evaluator.php me:mn s all code:covid 0 revenueperclient
+php evaluator.php me:mn s all code:covid 0 paidperpatient
 
 Oh yea bummer.  The covid stuff is in the cpt and hcpcs I data that is copyrighted from the AMA.  So I can't give you a copy of the description for the codes are, HCPCS II codes are supposedly public domain and you got those.  If you are interested in covid billings, ask AI what cpt and HCPCS I codes cover covid then assign the values in the quotes (after the billing code) in /data/cptdictionary2.
 
@@ -92,10 +92,10 @@ although it should be noted that not all of these have been tested
 
 
 Now let's suppose I just want to focus on the town of lewiston as to the billing code t2016
-php evaluator.php me s all code:covid 0 revenueperclient match lewiston city 
+php evaluator.php me s all code:covid 0 paidperpatient match lewiston city 
 
 Let's suppose an out of state zipcode
-php evaluator.php me s all code:covid 0 revenueperclient !match zip
+php evaluator.php me s all code:covid 0 paidperclaim !match zip
 
 There is no point really to give multiple examples of this
 
