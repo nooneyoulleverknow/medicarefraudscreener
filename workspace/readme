@@ -1,0 +1,11 @@
+Now before you get started.... you have to download some mega files
+
+https://download.cms.gov/nppes/NPPES_Data_Dissemination_July_2026_V2.zip
+https://opendata.hhs.gov/datasets/medicaid-provider-spending/ These should go in your workspace folder, and you should do so now and decompress When you are done, this should occupy between 20-25 GB.
+
+Now you could get the latest NPPES data, and that would result in a name change and would break the code.... But a simple fix without changing code is to ensure that the nppes folder is named:
+NPPES_Data_Dissemination_April_2026_V2
+and make sure the 10GB file inside is called:
+npidata_pfile_20050523-20260412.csv
+
+Of course, DHHS could change the file structure in the future possibly breaking everything, so the April 2026 edition is known to be compatible with the code anyways.
