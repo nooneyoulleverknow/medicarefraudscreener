@@ -20,6 +20,9 @@ $std2=strtolower($argv[5]);
 $bagglist=array();
 $sagglist=array();
 $field2=strtolower($argv[6]);
+if ($field2==="revenuesperclient" || $field2==="paidperclient" || $field2==="revenuesperpatient" || $field2==="revenues/client" || $field2==="paid/client" || $field2==="revenues/patient" || $field2==="paid/patient") {$field2="paidperpatient";}
+if ($field2==="revenuesperclaim" || $field2==="revenues/claim" || $field2==="paid/claim")  {$field2="paidperclaim";}
+if ($field2==="claimsperclient" || $field2==="claims/client" || $field2==="claims/patient")  {$field2="claimsperpatient";}
 $m="";
 $areacodes="";
 $zipcodes="";
@@ -534,15 +537,15 @@ else {$bagglist[$list[20]."-".$list[41]."-".$sy]=$list;$bagglist[$list[20]."-".$
 }
 
 else {
-echo "writing:".$data2[$i].",".$start."\n";
-echo "paid:".$line[45]."\n";
+//echo "writing:".$data2[$i].",".$start."\n";
+//echo "paid:".$line[45]."\n";
 fwrite($statepbuffer[$e],$data2[$i].",".$start."\n");
 fwrite($aggpbuffer,$data2[$i].",".$start."\n");
 }
 }//end if hcode and year match
 else {if ($i>0)
-    {echo "strpos".(strpos($code2,$line[41]))."\n";
-     echo "year:".strpos($y1,substr($line[42],0,4))."\n";
+    {//echo "strpos".(strpos($code2,$line[41]))."\n";
+     //echo "year:".strpos($y1,substr($line[42],0,4))."\n";
 echo "y".$y1."\n";
 
 echo "l41".$line[41]."\n";
@@ -559,10 +562,10 @@ $start+=$jump+1;
 
 echo "\nstart:".$start."\n";
 
-echo 100*($start/$fs1)." : ";
+echo 100*($start/$fs1)."% : ";
 echo (time()-$n);
-echo " : ";
-echo (time()-$n)/(($start/$fs1))." : ";
+echo "(s) : ";
+echo (time()-$n)/(($start/$fs1))."(s) estimate : ";
 echo $start."\n";
 
 }//end while
@@ -938,22 +941,22 @@ else {$sagglist[$list[20]."-".$list[41]."-".$sy]=$list;$sagglist[$list[20]."-".$
 }
 
 else {
-echo "writing:".$data2[$i].",".$start."\n";
-echo "paid:".$line[45]."\n";
+//echo "writing:".$data2[$i].",".$start."\n";
+//echo "paid:".$line[45]."\n";
 fwrite($statesbuffer[$e],$data2[$i].",".$start."\n");
 fwrite($aggsbuffer,$data2[$i].",".$start."\n");
 }
 }//end hcode and year match
 else {if ($i>0)
-    {echo "strpos".(strpos($code2,$line[41]))."\n";
-     echo "year:".strpos($y1,substr($line[42],0,4))."\n";
-echo "y".$y1."\n";
+    {//echo "strpos".(strpos($code2,$line[41]))."\n";
+     //echo "year:".strpos($y1,substr($line[42],0,4))."\n";
+//echo "y".$y1."\n";
 
-echo "l41".$line[41]."\n";
-echo "l42".$line[42]."\n";
-echo "count(line)".count($line)."\n";
-echo "start".$start."\n";
-        echo $data2[$i];$undcode[$line[41]]="\"0\"";
+//echo "l41".$line[41]."\n";
+//echo "l42".$line[42]."\n";
+//echo "count(line)".count($line)."\n";
+//echo "start".$start."\n";
+//        echo $data2[$i];$undcode[$line[41]]="\"0\"";
 //        exit;
     }
 
@@ -963,10 +966,10 @@ $start+=$jump+1;
 
 echo "\nstart:".$start."\n";
 
-echo 100*($start/$fs1)." : ";
+echo 100*($start/$fs1)."% : ";
 echo (time()-$n);
-echo " : ";
-echo (time()-$n)/(($start/$fs1))." : ";
+echo "(s) : ";
+echo (time()-$n)/(($start/$fs1))."(s) estimate : ";
 echo $start."\n";
 }//endwhile(start/fs1)
 if (isset($argv[7]) && ($m==="company" || $m==="address")) {
