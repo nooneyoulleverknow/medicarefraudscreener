@@ -76,7 +76,7 @@ $s2i++;
 if ($state==="ALL") {
 $counter=0;
 $s2i=$g=count($states);
-for($e=0;$e<$f;$e++) {
+for($e=0;$e<$g;$e++) {
 $path[0]=$pwd."/medicaid_files/npidata_pfile_20050523-20260412".basename("__".$states[$e]).".billing";
 $path2[0]=$pwd."/medicaid_files/npidata_pfile_20050523-20260412".basename("__".$states[$e]).".servicing";}
 }
