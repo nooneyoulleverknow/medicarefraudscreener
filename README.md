@@ -126,7 +126,7 @@ they can even be combined like af:su
 
 af would include african names and arabic names, su would be susa (persia), aa is african america, na is north american (but the ai liked to put in non applicable into the na region)
 
-php evaluator.php me s all code:covid 0 revenuesperclaim match nameorigin in:af
+php evaluator.php me 9 all all 0 revenuesperclaim match nameorigin in:af
 
 A term in the 8th argument as seen above is a query term, like lewiston.  It should have a matching 9th argument like city as seen above. This was created before the Ross mess, and hasn't been tested since, you should be able chain them above like 75:lewiston as the 8th argument and address:city as the 9th argument.  The number of delimiter must match if you do a search this way.  
 the searchable fields in argument 9 are
