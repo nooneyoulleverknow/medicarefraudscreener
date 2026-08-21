@@ -12,7 +12,7 @@ That is, from a terminal you would type php makestatehash.php
 
 Now before you get started....
 you have to download some mega files
-1.  https://download.cms.gov/nppes/NPPES_Data_Dissemination_July_2026_V2.zip
+1.  https://download.cms.gov/nppes/NPPES_Data_Dissemination_April_2026_V2.zip
 2.  https://opendata.hhs.gov/datasets/medicaid-provider-spending/
 These should go in your workspace folder, and you should do so now and decompress
 When you are done, this should occupy between 20-25 GB.
