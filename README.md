@@ -151,5 +151,7 @@ additional files
 4.zipcodes
 5.areacodes
 
-Either the cpt or HCPS are owned by a mix of the AMA/ADA. So they are copyrighted and I could not say what they are. I tried to contact the AMA to allow a journalist to use it (i created my own list as fair use), but they kept wanting me to call them.  I don't like telephones.  
 these are just csv or comma delimited files.
+
+
+Either the cpt or HCPS codes are owned by a mix of the AMA/ADA. So the set that are copyrighted has to have their descriptions blank in a public release. I tried to contact the AMA to allow a journalist to use a version I created for myself (fair use for me), but they kept wanting me to call them.  I don't like telephones.  Like, just tell me who needed to buy the license, if one is needed, and how much.
