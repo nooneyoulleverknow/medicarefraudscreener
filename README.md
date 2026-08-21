@@ -66,9 +66,11 @@ During this time, I learned that a federal judge, whom I said in motion should h
 Finally, I decided to add an aggregator.  Wasn't sure where to put it in, just I was getting tired for a long time seeing repeated entries but someone billing weekly or something.
 
 So let's say we want to search maine, based upon the service providers, in the year 2024, with a standard deviation of 2 as applied to revenue, against all billing codes:
+
 php evaluator.php me s 2024 all 2 revenue
 
 Now let's say that I want to search both maine and minnesota, for service providers (I haven't found billers useful), for all years, for covid, with a standard deviation of 0 to show all records, against revenues per client:
+
 php evaluator.php me:mn s all code:covid 0 paidperpatient
 
 Oh yea bummer.  The covid stuff is in the cpt and hcpcs I data that is copyrighted from the AMA.  So I can't give you a copy of the description for the codes are, HCPCS II codes are supposedly public domain and you got those.  If you are interested in covid billings, ask AI what cpt and HCPCS I codes cover covid then assign the values in the quotes (after the billing code) in /data/cptdictionary2.
@@ -92,9 +94,11 @@ although it should be noted that not all of these have been tested
 
 
 Now let's suppose I just want to focus on the town of lewiston as to the billing code t2016
+
 php evaluator.php me s all code:covid 0 paidperpatient match lewiston city 
 
 Let's suppose an out of state zipcode
+
 php evaluator.php me s all code:covid 0 paidperclaim !match zip
 
 There is no point really to give multiple examples of this
@@ -135,10 +139,13 @@ organization
 
 The last variant tried to aggregate data.
 I was uncertain how to implement this, but for now I took the most basic model and allowed a 7th argument of company or address.  here is for company, it will reduce some redundancy from a traditional table view.
+
 php evaluator.php me s all code:covid 0 revenue city
 
 The below might be useful to try to identify if a bunch of payments are going to one address
+
 php evaluator.php me s all code:covid 0 revenue address
+
 But it should be noted, that all other information other then the financials, will be based upon initial values.  so if you have 50 businesses in one street address, you will only see the first business it saw [for that year].  This view doesn't care what the others are.
 
 more aggragates can be added with ease if you are competent.  just open up evaluator.php and search for "company". It should appear in 4 locations.  pretty much copy paste, change the new "company" to a search a term of your desire, and change the values found in list.
