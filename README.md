@@ -118,14 +118,17 @@ term
 term1:term2
 
 Again this was made before the Ross mess.
-My Understanding is you can use say zipcode or area code as the 8th element.  nameorigin will require a region code as the 9th element.
+My Understanding is you can use say zipcode or areacode as the 8th element.  nameorigin will require a region code as the 9th element.
 
-region code:
-eu,in,is,su,na,aa,af,jp,bm,oc,kr,ru,hs,th,cb,ch
+region code:eu,in,is,su,na,aa,af,jp,bm,oc,kr,ru,hs,th,cb,ch
+
 they can even be combined like af:su
+
 af would include african names and arabic names, su would be susa (persia), aa is african america, na is north american (but the ai liked to put in non applicable into the na region)
 
-A term in the 8th argument as seen above is a query term, like lewiston. it should have a matching 9th argument like city as seen above. you can chain them above live 75:lewiston as the 8th argument and address:city as the 9th argment.  The number of delimiter must match if you do a search this way.  
+php evaluator.php me s all code:covid 0 revenuesperclaim match nameorigin in:af
+
+A term in the 8th argument as seen above is a query term, like lewiston.  It should have a matching 9th argument like city as seen above. This was created before the Ross mess, and hasn't been tested since, you should be able chain them above like 75:lewiston as the 8th argument and address:city as the 9th argument.  The number of delimiter must match if you do a search this way.  
 the searchable fields in argument 9 are
 city
 state
