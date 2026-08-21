@@ -50,8 +50,8 @@ and that the php script ran (it should show a percent complete, time ran, estima
 
 ok, assuming everything works...well before trying
 This is probably going to take at least 8 hours on an ssd drive.  So you may want to run this script when you are asleep.  If you are going to leave it running in an office, make sure that the office still has power after hours.  If you were trying it on my 15 year old laptop, not that I tried, I gasp to think this could take a week or two...maybe more.
-so, oh year,  by the time we are done, the medicaid_files folder will take up about 170GB or more.
-Why?  IDK, but this will chop up the bulk medicaid datadump and divide it p into 2 separate chunks by state.  One by the billers, and the other by the servicers.  It will also join the npped data.  So it will be faster in analyzing a particular state
+so, oh yeah,  by the time we are done, the medicaid_files folder will take up about 170GB or more.
+This will chop up the bulk medicaid datadump and divide it up into 2 separate chunks by state.  One by the billers, and the other by the servicers.  It will also join the nppes data.  So it will be faster in analyzing a particular state
 So assuming your system can handle it, try:
 php medicaidmakebills.php
 
@@ -139,9 +139,9 @@ php evaluator.php me s all code:covid 0 revenue city
 
 The below might be useful to try to identify if a bunch of payments are going to one address
 php evaluator.php me s all code:covid 0 revenue address
-But it should be noted, that all other information other then the financials, will be based upon initial values.  so if you have 50 businesses in one street address, you will only see the first business it saw [for that year].  This view doesn't care what the others are
+But it should be noted, that all other information other then the financials, will be based upon initial values.  so if you have 50 businesses in one street address, you will only see the first business it saw [for that year].  This view doesn't care what the others are.
 
-more aggragates can be added with ease if you are competent.  just open up evaluator.php and search for "company". It should appear in 4 locations.  pretty much copy paste, change the new "company" to a serahc term of your desire, and change the values found in list.
+more aggragates can be added with ease if you are competent.  just open up evaluator.php and search for "company". It should appear in 4 locations.  pretty much copy paste, change the new "company" to a search a term of your desire, and change the values found in list.
 
 
 additional files
@@ -151,4 +151,5 @@ additional files
 4.zipcodes
 5.areacodes
 
+Either the cpt or HCPS are owned by a mix of the AMA/ADA. So they are copyrighted and I could not say what they are. I tried to contact the AMA to allow a journalist to use it (i created my own list as fair use), but they kept wanting me to call them.  I don't like telephones.  
 these are just csv or comma delimited files.
