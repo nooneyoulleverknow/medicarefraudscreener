@@ -1,5 +1,7 @@
 # medicarefraudscreener
-just some scripts to chop up the medicaid files, so that you can search by various criteria.
+just some scripts to chop up the medicaid files, so that you can search by various criteria to try to identify medicaid fraud.  Why did I call it medicare? typo.  This isn't proof of fraud by any means, journalists, citizen or real, will have to investigate the targets it identifies.
+
+I must say I been banned on x for over a week over a false positive, I was planning to announce this over x.  But X's customer service experience is the freshest piles of cow excrement anywhere in the world.  They should stop employing how piss guzzlers, and usage of AI should be heuristic for which ML based AI is supposed to converge anyways-except for LLM based AI which is just a disaster waiting to happen.
 
 There are 3 main scripts, but don't run them yet.
 1. makestatehash.php
